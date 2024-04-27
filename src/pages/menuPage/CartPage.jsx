@@ -14,10 +14,7 @@ const CartPage = () => {
   const [cartItems, setCartItems] = useState([]);
   // console.log(cartItems)
 
-  // Calculate the total price for each item in the cart
-  const calculateTotalPrice = (item) => {
-    return item.price * item.quantity;
-  };
+  
   // Handle quantity increase
   const handleIncrease = async (item) => {
     try {
@@ -82,6 +79,11 @@ const CartPage = () => {
         console.error("Error updating quantity:", error);
       }
     }
+  };
+  
+  // Calculate the total price for each item in the cart
+  const calculateTotalPrice = (item) => {
+    return item.price * item.quantity;
   };
 
   // Calculate the cart subtotal
